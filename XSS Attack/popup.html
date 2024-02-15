@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>XSS Vulnerability Report</title>
+  <link rel="stylesheet" type="text/css" href="popup.css">
+</head>
+<body>
+  <div class="popup-container">
+    <header class="popup-header">
+      <h1 class="popup-title">Vulnerability Report</h1>
+    </header>
+    <div id="report" class="report-container">
+      <!-- XSS vulnerability message or report -->
+      <div class="status-message">
+        <img src="icons/search-icon.png" alt="Search" class="status-icon">
+        <p>Scanning for XSS vulnerabilities...</p>
+      </div>
+      <!-- You can display the detected vulnerabilities here -->
+    </div>
+    <footer class="popup-footer">
+      <button id="dashboardButton" class="dashboard-button">Open Dashboard</button>
+      <button id="resetButton" class="reset-button">Reset Report</button>
+    </footer>
+  </div>
+  <script src="popup.js"></script>
+</body>
+</html>

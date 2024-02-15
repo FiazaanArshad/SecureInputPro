@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Extension Dashboard</title>
+  <link rel="stylesheet" type="text/css" href="dashboard.css">
+  <style>
+    /* Additional inline CSS for centering the buttons */
+    body {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 100vh;
+      margin: 0;
+    }
+
+    /* Style for the buttons */
+    button {
+      padding: 10px 20px;
+      font-size: 16px;
+      margin: 10px;
+    }
+  </style>
+</head>
+<body>
+  <!-- Container for centering the buttons -->
+  <div class="button-container">
+    <!-- Button for User Dashboard -->
+    <a id="userDashboardLink" href="user_dashboard.html"><button>User Dashboard</button></a>
+
+    <!-- Button for Administrator Dashboard -->
+    <a id="adminDashboardLink" href="admin_dashboard.html"><button>Administrator Dashboard</button></a>
+  </div>
+
+  <!-- Your dashboard content goes here -->
+
+  <script>
+    // Function to redirect to User Dashboard
+    function redirectToUserDashboard() {
+      // Redirect to the user_dashboard page
+      window.location.href = 'user_dashboard.html';
+    }
+  </script>
+</body>
+</html>

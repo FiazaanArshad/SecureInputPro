@@ -1,0 +1,149 @@
+body, html {
+    height: 100%;
+    margin: 0;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background-color: #182735; /* Dark blue background */
+    color: white;
+  }
+  
+  .popup-container {
+    width: 350px; /* Set a fixed width for the popup */
+    height: 500px; /* Set a fixed height for the popup */
+    border-radius: 10px; /* Rounded corners for the popup */
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2); /* Shadow for depth */
+    overflow: hidden; /* Ensures nothing overflows from the container */
+    display: flex;
+    flex-direction: column;
+    background: #34495e; /* Background color for the popup */
+  }
+  
+  .popup-header {
+    background: linear-gradient(to right, #2342c0, #1e1888, #0c062a); /* Gradient header */
+    padding: 20px;
+    text-align: center; /* Center align the header content */
+    border-top-left-radius: 10px;
+    border-top-right-radius: 10px;
+  }
+  
+  .popup-title {
+    margin: 0;
+    font-size: 1.5em;
+    color: white;
+  }
+  
+  .report-container {
+    flex-grow: 1;
+    padding: 15px;
+    overflow-y: auto; /* Add scroll to the report container if content overflows */
+    background: #1c2a38; /* Background color for the report container */
+  }
+  
+  .dashboard-button {
+    background-color: #2980b9; /* Blue button */
+    color: white;
+    padding: 10px 15px;
+    border: none;
+    border-radius: 5px;
+    font-size: 1em;
+    cursor: pointer;
+    outline: none;
+    margin: 10px auto; /* Center the button horizontally */
+    display: block; /* Make the button a block element */
+    width: 80%; /* Button width */
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2); /* Shadow for the button */
+  }
+  
+  .dashboard-button:hover {
+    background-color: #010000; /* Darker blue on hover */
+  }
+  
+  .popup-footer {
+    padding: 10px;
+    text-align: center; /* Center align footer content */
+    border-bottom-left-radius: 10px;
+    border-bottom-right-radius: 10px;
+    background: #2c3e50; /* Footer background color */
+  }
+  /* New style for "Reset Report" button */
+.reset-button {
+    background-color: #6b130a; /* Red button */
+    color: white;
+    padding: 10px 15px;
+    border: none;
+    border-radius: 5px;
+    font-size: 1em;
+    cursor: pointer;
+    outline: none;
+    margin: 10px auto; /* Center the button horizontally */
+    display: block; /* Make the button a block element */
+    width: 80%; /* Button width */
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2); /* Shadow for the button */
+}
+
+.reset-button:hover {
+    background-color: #000000; /* Darker red on hover */
+}
+
+  /* Additional styling for the button that opens the dashboard */
+  .dashboard-button {
+    background: linear-gradient(to right, #2342c0, #1e1888, #0c062a); /* Gradient header */
+    border: none;
+    color: white;
+    padding: 10px 20px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    margin: 4px 2px;
+    cursor: pointer;
+    border-radius: 12px; /* Rounded corners for the button */
+    box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
+    transition-duration: 0.4s;
+  }
+  
+  .dashboard-button:hover {
+    box-shadow: 0 12px 16px 0 rgba(0,0,0,0.24), 0 17px 50px 0 rgba(0,0,0,0.19);
+  }
+  /* ... (previous styles) ... */
+
+.status-message {
+    background-color: #0c062a; /* A different shade for the status background */
+    color: #fff;
+    padding: 10px;
+    margin-bottom: 10px;
+    border-radius: 5px;
+    display: flex;
+    align-items: center;
+  }
+  
+  .status-icon {
+    width: 24px; /* Set an appropriate size for the icon */
+    height: 24px; /* Set an appropriate size for the icon */
+    margin-right: 10px;
+  }
+  
+  /* ... (additional styles) ... */
+  
+  /* Animated ellipsis for the scanning message */
+  .status-message p:after {
+    content: '...';
+    animation: ellipsis 1.5s infinite;
+  }
+  
+  @keyframes ellipsis {
+    0% {
+      content: '';
+    }
+    33% {
+      content: '.';
+    }
+    66% {
+      content: '..';
+    }
+    100% {
+      content: '...';
+    }
+  }
+  
+  /* ... (remaining styles) ... */
+  
