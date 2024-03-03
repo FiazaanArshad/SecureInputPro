@@ -1,0 +1,38 @@
+{
+    "manifest_version": 3,
+    "name": "Form Validator",
+    "version": "1.0",
+    "description": "Validate user form on webpages",
+    "icons": {
+        "48": "icon.png"
+    },
+    "permissions": [
+        "storage",
+        "activeTab",
+        "webNavigation",
+        "webRequest",
+        "cookies"
+    ],
+    "content_security_policy": {
+        "sandbox": "sandbox allow-scripts; script-src 'self' https://www.facebook.com;"
+    },
+    "background": {
+        "service_worker": "background.js",
+        "web_accessible_resources": [
+            {
+                "resources": ["content.js"],
+                "matches": ["<all_urls>"]
+            }
+        ]
+    },
+    "action": {
+        "default_popup": "popup.html",
+        "default_icon": "icon.png"
+    },
+    "content_scripts": [
+        {
+            "matches": ["<all_urls>"],
+            "js": ["content.js"]
+        }
+    ]
+}

@@ -1,0 +1,207 @@
+<!DOCTYPE html>
+<html style="height: auto;">
+
+<head>
+    <title>Form Validator</title>
+    <script src="popup.js"></script>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            background: none;
+            border-radius: 10px;
+            width: fit-content;
+            min-width: 300px;
+            max-width: fit-content;
+
+        }
+
+        header {
+            background: linear-gradient(to bottom, #402ae5, #010124);
+
+            height: 80px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: white;
+            border-top-left-radius: 10px;
+            border-top-right-radius: 10px;
+        }
+
+        body section {
+            background-color: #363636;
+            flex-grow: 1;
+            display: flex;
+            height: auto;
+            flex-direction: column;
+            align-items: center;
+            justify-content: flex-start;
+            padding: 20px;
+
+        }
+
+        footer {
+            background: linear-gradient(to top, #402ae5, #010124);
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: space-around;
+            border-bottom-left-radius: 10px;
+            border-bottom-right-radius: 10px;
+            height: 80px;
+        }
+
+        button {
+            background-color: #000059;
+            color: #fff;
+            padding: 10px;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+            font-size: 14px;
+            width: 200px;
+            margin-top: 10px;
+        }
+
+        button:hover {
+            background-color: #402ae5;
+        }
+
+        #historyDropdown {
+            padding: 8px;
+            font-size: 14px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+            background-color: #000059;
+            color: white;
+            width: 200px;
+            cursor: pointer;
+            margin-top: 10px;
+            background-image: url('path-to-your-arrow-icon.png');
+            background-repeat: no-repeat;
+            background-position: right 8px center;
+            display: none;
+        }
+
+        #historyDropdown:hover {
+            border-color: #aaa;
+        }
+
+        #historyDropdown:focus {
+            outline: none;
+            border-color: #402ae5;
+            box-shadow: 0 0 5px rgba(0, 0, 0, 0.3);
+        }
+
+        .dashboard-section {
+            display: none;
+        }
+
+        .footer-main {
+            display: flex;
+        }
+
+        .footer-dashboard {
+            display: none;
+
+        }
+
+        #historyList {
+            background-color: #000059;
+            border-radius: 10px 10px 10px 10px;
+            padding: 10px;
+            list-style: none;
+            display: none;
+            color: white;
+
+        }
+
+        #historyList li {
+            margin-bottom: 8px;
+            padding: 10px;
+            border-radius: 4px;
+            color: white;
+            font-size: 14px;
+            border: 1px solid #ccc;
+
+        }
+
+
+        #headerTitle {
+            margin-left: 10px;
+        }
+
+        #backButton {
+            position: absolute;
+            left: 0;
+            display: none;
+            background-color: transparent;
+            color: #fff;
+            margin-left: 10px;
+            width: fit-content;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+            font-size: 14px;
+            z-index: 1;
+            padding-bottom: 20px;
+
+
+        }
+
+        .snackbar {
+            visibility: hidden;
+            background-color: #4caf50;
+            color: #fff;
+            padding: 10px;
+            border: none;
+            border-radius: 4px;
+            font-size: 14px;
+            width: 200px;
+            position: fixed;
+        }
+
+        .snackbar.show {
+            visibility: visible;
+        }
+    </style>
+</head>
+
+<body>
+    <header>
+        <button type="button" id="backButton">Back</button>
+        <h2 id="headerTitle">Secure Input Pro</h2>
+    </header>
+
+    <section class="main-section">
+        <button type="button" id="validateInputs">Validate Input
+            Fields</button>
+
+        <button type="button" id="infoBtn">Info</button>
+        <select id="historyDropdown" class="custom-dropdown">
+        </select>
+        <ul id="historyList"></ul>
+    </section>
+
+    <section class="dashboard-section">
+        <!-- Dashboard section content -->
+        <button type="button" id="validateButton">Validate
+            Form</button>
+    </section>
+
+    <footer class="footer-main">
+        <button type="button" id="dashboard">Dashboard</button>
+
+    </footer>
+
+    <footer class="footer-dashboard">
+        <button type="button" id="clearHistoryButton" class="history-button">Clear History</button>
+
+        <div id="snackbar" class="snackbar"></div>
+
+
+    </footer>
+
+</body>
+
+</html>
